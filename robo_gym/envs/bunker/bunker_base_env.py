@@ -98,7 +98,7 @@ class BunkerRBaseEnv(gym.Env):
         rs_state = dict.fromkeys(self.get_robot_server_composition(), 0.0)
 
         # Set initial robot joint goals
-        base_velocity = [0, 0]
+        # base_velocity = [0, 0]
 
         # Set initial state of the Robot Server
         state_msg = self._set_initial_robot_server_state(rs_state)
@@ -118,6 +118,7 @@ class BunkerRBaseEnv(gym.Env):
         if not self.camera and not self.observation_space['state'].contains(state['state']):
             raise InvalidStateError()
 
+        print(rs_state)
 
         self.rs_state = rs_state
         if self.camera:
@@ -170,7 +171,8 @@ class BunkerRBaseEnv(gym.Env):
 
         # Convert the state from Robot Server format to environment format
         state['state'] = self._robot_server_state_to_env_state(rs_state)
-
+        # print(rs_state)
+        # print(rs_state_all)
         if self.camera:
              state['camera'] = self.camera_config.process_camera_images(rs_state_all.string_params)
             
