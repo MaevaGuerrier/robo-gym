@@ -12,4 +12,4 @@ for episode in range(1):
     env.reset()
     while not done:
         state, reward, done,_, info = env.step(action)
-        print(state)
+        print(state['camera'].shape)

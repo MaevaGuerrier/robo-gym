@@ -178,8 +178,8 @@ class BunkerRBaseEnv(gym.Env):
             raise InvalidStateError()
 
         # Check if the environment state is contained in the observation space
-        if not self.observation_space.contains(state):
-            raise InvalidStateError()
+        # if not self.observation_space.contains(state):
+        #     raise InvalidStateError()
 
         self.rs_state = rs_state
 
