@@ -12,6 +12,7 @@ class RoboGymCamera:
         self.num_cameras = num_cameras
         self.image_encoding = ''
 
+
         self.observation_space = self.get_camera_observation_shape()
 
     def process_camera_images(self, string_params):
@@ -19,6 +20,7 @@ class RoboGymCamera:
 
         image_count = int(string_params.get("image_count", "0"))
         self.image_encoding = string_params['image_encoding']
+        print(string_params['image_encoding'])
 
         if image_count == 0:
             if self.image_mode == 'temporal':
