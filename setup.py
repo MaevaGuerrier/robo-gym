@@ -23,7 +23,7 @@ setuptools.setup(
     install_requires=[
         "gymnasium",
         "robo-gym-server-modules",
-        "numpy",
+        "numpy==1.24.3",
         "scipy",
         "pyyaml",
         'modern_robotics',

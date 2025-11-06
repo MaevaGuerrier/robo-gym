@@ -187,9 +187,14 @@ from gymnasium.envs.registration import register
 #     entry_point='robo_gym.envs:EmptyEnvironmentInterbotixRSim',
 # )
 
+# register(
+#     id='BunkerRRob-v0',
+#     entry_point='robo_gym.envs:BunkerRRob',
+# )
+
 register(
-    id='BunkerRRob-v0',
-    entry_point='robo_gym.envs:BunkerRRob',
+    id='LimoSRob-v0',
+    entry_point='robo_gym.envs:LimoSRob',
 )
 
-from robo_gym.envs.bunker.bunker_base_env import BunkerRRob
+from robo_gym.envs.limo.limo_base_env import LimoSRob

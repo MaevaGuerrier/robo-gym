@@ -3,10 +3,10 @@ import robo_gym
 from PIL import Image as PILImage
 import os
 
-target_machine_ip = "192.168.1.23:50051"
-robot_model = "bunker"
+target_machine_ip = "127.0.0.1:50051"
+robot_model = "limo"
 env = gym.make(
-    "BunkerRRob-v0",
+    "LimoSRob-v0",
     rs_address=target_machine_ip,
     robot_model=robot_model,
     with_camera=True,

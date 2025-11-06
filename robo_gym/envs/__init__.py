@@ -60,4 +60,5 @@ from robo_gym.envs.example.example_env import ExampleEnvSim, ExampleEnvRob
 # )
 
 # Interbotix Rover
-from robo_gym.envs.bunker.bunker_base_env import BunkerRRob
+# from robo_gym.envs.bunker.bunker_base_env import BunkerRRob
+from robo_gym.envs.limo.limo_base_env import LimoSRob
